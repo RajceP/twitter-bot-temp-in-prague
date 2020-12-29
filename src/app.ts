@@ -1,15 +1,8 @@
 import axios from 'axios';
 import dotenv from 'dotenv';
 import Twit from 'twit';
-import express from 'express';
 
-const app = express();
 dotenv.config();
-
-const port = process.env.PORT || 3002;
-app.listen(port, () => {
-  console.log(`Bot listening on port ${port}`);
-});
 
 const T = new Twit({
   consumer_key: process.env.CONSUMER_KEY!,
