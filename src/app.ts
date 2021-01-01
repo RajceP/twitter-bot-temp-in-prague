@@ -17,7 +17,7 @@ const getTemperature = async () => {
     .get(weatherUrl)
     .then((res: any) => res.data.consolidated_weather[0].the_temp);
 
-  return temp;
+  return (Math.round(temp * 100) / 100).toFixed(2);
 };
 
 const tweetTemperature = async () => {
