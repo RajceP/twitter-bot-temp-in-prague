@@ -23,7 +23,7 @@ const getTemperature = async () => {
 const tweetTemperature = async () => {
   const temp = await getTemperature();
   T.post('statuses/update', { status: `${temp} °C` }, (_err, data: any) => {
-    console.log(data.id);
+    console.log(data);
   });
 };
 
